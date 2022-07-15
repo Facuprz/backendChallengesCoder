@@ -1,8 +1,9 @@
-const fs = require ('fs');
+//const fs = require ('fs');
+import fs from "fs"
 
 const path = './files/products.json'
 
-class Container { //container class, manage products
+export default class Container { //container class, manage products
     getAll = async () => {
         try {
             if (fs.existsSync(path)) {

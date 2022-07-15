@@ -1,4 +1,5 @@
-const Container = require("./containers/container")
+//const Container = require("./containers/container")
+import Container from "./containers/container"
 
 const productService = new Container();
 
