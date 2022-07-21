@@ -74,4 +74,14 @@ export default class Container { //container class, manage products
     }
 }
 
-module.exports = Container;
+    getRandom = async () => {
+        try {
+            const arr = await this.getAll()
+            let randomNumber = Math.floor(Math.random()*arr.length + 1)
+            return (arr.find((el) => el.id == randomNumber))
+        } catch (err) {
+            console.log ('Error: '+err);
+        }
+    }
+
+//module.exports = Container;

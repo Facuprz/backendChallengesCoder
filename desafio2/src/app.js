@@ -1,4 +1,5 @@
 import express from 'express'
+import Container from './containers/container.js'
 
 const app = express();
 const PORT = 8080;
@@ -19,3 +20,7 @@ app.get('/products', async (req, res)=>{
     res.send(result)
 })
 
+app.get('/productRandom', async (req, res) => {
+    let randomProduct = await productService.getRandom()
+    res.send(randomProduct)
+})
